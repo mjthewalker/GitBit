@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Leaf } from 'lucide-react';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
@@ -30,7 +30,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
-    
+  
     if (Object.keys(newErrors).length === 0) {
       try {
         const response = await fetch('http://localhost:8000/user/signin', {
@@ -40,8 +40,11 @@ const LoginForm = () => {
           },
           body: JSON.stringify(formData),
         });
-        
+  
         if (response.ok) {
+          const data = await response.json();
+          // Assuming your backend sets a token in the response
+          document.cookie = `token=${data.token}; path=/`; // Add this line to set the cookie
           console.log('Login successful');
           navigate('/home');
         } else {
@@ -55,7 +58,6 @@ const LoginForm = () => {
       setErrors(newErrors);
     }
   };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
