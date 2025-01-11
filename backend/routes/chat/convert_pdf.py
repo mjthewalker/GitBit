@@ -38,10 +38,10 @@ def txt_to_single_pdf(txt_directory, pdf_file):
     pdf.output(pdf_file)
 
 # Directory where the .txt files are located
-txt_directory = "/content"  # Replace with your directory path
+txt_directory = "./downloaded_pages"  # Replace with your directory path
 
 # Output PDF file
-pdf_file = "/content/output.pdf"  # Replace with your desired output PDF file path
+pdf_file = "./ml-integration/pdf/output.pdf"  # Replace with your desired output PDF file path
 
 # Convert all text files into a single PDF
 txt_to_single_pdf(txt_directory, pdf_file)

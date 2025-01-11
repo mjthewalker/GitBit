@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +19,8 @@ const ProtectedRoute = ({ children }) => {
   return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
 
+
+
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   
@@ -31,11 +33,16 @@ function App() {
 
 const AppContent = ({ setIsLogin, isLogin }) => {
   const location = useLocation();
-  
+    const [expanded, setExpanded] = useState(true);
+
+    useEffect(() => {
+      console.log(expanded);
+    }, [expanded]);
+
   return (
-    <>
+    <div>
       {/* Conditionally render Navbar only if not on the login page */}
-      {location.pathname !== "/login" && location.pathname !== '/market' && <Navbar />}
+      {location.pathname !== "/login" && <Navbar setExpanded={setExpanded}/>}
       
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
@@ -43,7 +50,7 @@ const AppContent = ({ setIsLogin, isLogin }) => {
           path="/home"
           element={
             <ProtectedRoute>
-              <Home />
+              <Home expanded={expanded}/>
             </ProtectedRoute>
           }
         />
@@ -51,7 +58,7 @@ const AppContent = ({ setIsLogin, isLogin }) => {
         <Route path="/market" element={<Market />} />
         
         <Route path="/market/orders" element={<MarketOrdersPage />} />
-        
+
         <Route
           path="/login"
           element={
@@ -91,7 +98,7 @@ const AppContent = ({ setIsLogin, isLogin }) => {
         />
         <Route path="/test" element={<Test />} />
       </Routes>
-    </>
+    </div>
   );
 };
 
