@@ -8,6 +8,7 @@ const PORT = 8000;
 const MongoURI = "mongodb+srv://nikhilkottoli2005:gitbit@gitbit.pqfk6.mongodb.net/?retryWrites=true&w=majority&appName=GitBit";
 
 const userRoutes = require("./routes/user");
+const marketRoutes = require("./routes/market");
 const { checkForAuthenticationCookie } = require("./middlewares/authentication");
 
 mongoose.connect(MongoURI).then(() => {
@@ -15,24 +16,18 @@ mongoose.connect(MongoURI).then(() => {
 });
 
 app.use(cors({
-  origin: "http://localhost:5173",  // Specific frontend URL
-  credentials: true,  // Allow cookies to be sent with requests
+  origin: "http://localhost:5173",
+  credentials: true,
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(checkForAuthenticationCookie("token"));
 app.use(express.json());
 
-// app.get("/", (req, res) => res.send("Hello World"));
-
-app.get("/userData", async (req, res) => {
-  const user = req.user;
-
-  console.log("User:", user);
-  res.json({ user });
-});
+app.get("/", (req, res) => res.send("Hello World"));
 
 app.use("/user", userRoutes);
+app.use("/market", marketRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
