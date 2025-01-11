@@ -9,6 +9,7 @@ const MongoURI = "mongodb+srv://nikhilkottoli2005:gitbit@gitbit.pqfk6.mongodb.ne
 
 const userRoutes = require("./routes/user");
 const marketRoutes = require("./routes/market");
+const portfolioRoutes = require("./routes/portfolio");
 const { checkForAuthenticationCookie } = require("./middlewares/authentication");
 
 mongoose.connect(MongoURI).then(() => {
@@ -28,6 +29,7 @@ app.get("/", (req, res) => res.send("Hello World"));
 
 app.use("/user", userRoutes);
 app.use("/market", marketRoutes);
+app.use('/portfolio', portfolioRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

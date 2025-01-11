@@ -4,7 +4,7 @@ import MarketSellerCard from './MarketSellerCard';
 import MarketSellerDetails from './MarketSellerDetails';
 import { TreePine, Search, AlertCircle } from 'lucide-react';
 
-const MarketplacePage = () => {
+const MarketplacePage = ({expanded}) => {
   const [sellers, setSellers] = useState([]);
   const [selectedSeller, setSelectedSeller] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,7 +49,8 @@ const MarketplacePage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div      className={`justify-center py-6 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-green-50 to-white ${expanded ? "ml-64" : "ml-20"
+    }`}>
       <MarketNav />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

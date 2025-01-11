@@ -32,7 +32,7 @@ library.add(
   faCaretUp
 );
 
-const Navbar = ({setExpanded}) => {
+const Navbar = ({ setExpanded }) => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
@@ -67,7 +67,11 @@ const Navbar = ({setExpanded}) => {
         </a>
 
         {/* Hamburger Menu for Mobile */}
-        <label htmlFor="nav-toggle" id="nav-toggle-label"   onClick={() => setExpanded((prev) => !prev)}>
+        <label
+          htmlFor="nav-toggle"
+          id="nav-toggle-label"
+          onClick={() => setExpanded((prev) => !prev)}
+        >
           <span id="nav-toggle-burger"></span>
         </label>
         <hr />
@@ -90,14 +94,26 @@ const Navbar = ({setExpanded}) => {
             navigate("/home");
           }}
         />
-        <NavButton icon="thumbtack" text="Carbon Credit" />
+        <NavButton
+          icon="thumbtack"
+          text="Carbon Credit"
+          onClick={() => {
+            navigate("/market");
+          }}
+        />
         <hr />
         <NavButton icon="heart" text="WatchList" />
         <NavButton icon="chart-line" text="Trending" />
         <NavButton icon="fire" text="Challenges" />
         <NavButton icon="magic" text="Spark" />
         <hr />
-        <NavButton icon="gem" text="Codepen Pro" />
+        <NavButton
+          icon="gem"
+          text="My Contribution"
+          onClick={() => {
+            navigate("/market/orders");
+          }}
+        />
 
         {/* Highlight Background */}
         <div id="nav-content-highlight"></div>

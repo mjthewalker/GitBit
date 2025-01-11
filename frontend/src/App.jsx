@@ -55,9 +55,9 @@ const AppContent = ({ setIsLogin, isLogin }) => {
           }
         />
 
-        <Route path="/market" element={<Market />} />
+        <Route path="/market" element={<Market expanded={expanded}/>} />
         
-        <Route path="/market/orders" element={<MarketOrdersPage />} />
+        <Route path="/market/orders" element={<MarketOrdersPage  expanded={expanded}/>} />
 
         <Route
           path="/login"
