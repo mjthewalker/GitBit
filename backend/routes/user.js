@@ -38,11 +38,26 @@ router.post("/signup", async (req, res) => {
   const { fullName, email, password } = req.body;
 
   try {
+    // Check if the email already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ 
+        error: "Email is already in use", 
+        message: "The email address you entered is already associated with an existing account."
+      });
+    }
+
+    // Create a new user
     await User.create({ fullName, email, password });
     return res.status(201).json({ message: "Signup successful. You can now sign in." });
   } catch (error) {
-    return res.status(500).json({ error: "Failed to create user. Try again." });
+    console.error(error);  // Log the error details for debugging purposes
+    return res.status(500).json({
+      error: "Failed to create user. Try again.",
+      message: error.message  // Send the error message as part of the response
+    });
   }
 });
+
 
 module.exports = router;

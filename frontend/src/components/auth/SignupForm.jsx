@@ -3,19 +3,23 @@ import { Sprout } from 'lucide-react';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
 import PasswordInput from '../ui/PasswordInput';
+import { useNavigate } from 'react-router-dom';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
-    username: '',
+    fullName: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState('');
+  
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.username) newErrors.username = 'Username is required';
+    if (!formData.fullName) newErrors.fullName = 'Full Name is required';
     if (!formData.email) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -47,7 +51,15 @@ const SignupForm = () => {
         });
         
         if (response.ok) {
-          console.log('Signup successful');
+          // Show success message instead of navigating
+          setSuccessMessage('Signup successful. Please login.');
+          setFormData({
+            fullName: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+          }); // Optionally clear the form
+          setErrors({}); // Clear errors if any
         } else {
           const data = await response.json();
           setErrors({ submit: data.message || 'Signup failed' });
@@ -92,15 +104,15 @@ const SignupForm = () => {
         <div className="bg-white/90 backdrop-blur-lg py-6 px-4 shadow-xl rounded-3xl sm:px-10">
           <form className="space-y-4" onSubmit={handleSubmit}>
             <Input
-              label="Username"
-              id="username"
-              name="username"
+              label="Full Name"
+              id="fullName"
+              name="fullName"
               type="text"
-              value={formData.username}
+              value={formData.fullName}
               onChange={handleChange}
-              error={errors.username}
-              autoComplete="username"
-              placeholder="Choose a username"
+              error={errors.fullName}
+              autoComplete="name"
+              placeholder="Enter your full name"
             />
 
             <Input
@@ -139,6 +151,10 @@ const SignupForm = () => {
 
             {errors.submit && (
               <div className="text-red-600 text-sm text-center">{errors.submit}</div>
+            )}
+
+            {successMessage && (
+              <div className="text-green-600 text-sm text-center">{successMessage}</div>
             )}
 
             <Button type="submit">Start your journey</Button>
