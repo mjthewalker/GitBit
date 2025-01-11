@@ -59,5 +59,11 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+router.get("/userData", async (req, res) => {
+  const user = req.user;
+
+  console.log("User:", user);
+  res.json({ user });
+});
 
 module.exports = router;

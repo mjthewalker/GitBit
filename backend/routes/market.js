@@ -45,6 +45,7 @@ router.post('/order', async (req, res) => {
     res.status(201).json({ message: 'Order placed successfully', order: newOrder });
   } catch (err) {
     res.status(500).json({ message: 'Error placing order', error: err });
+    console.log(err);
   }
 });
 

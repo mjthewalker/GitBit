@@ -60,7 +60,8 @@ const Navbar = () => {
         {/* Navigation Buttons */}
         <NavButton icon="palette" text="Home" onClick={() => { navigate('/home') }}/>
         <NavButton icon="images" text="ChatBot" onClick={() => { navigate('/home') }}/>
-        <NavButton icon="thumbtack" text="Carbon Credit" />
+        <NavButton icon="thumbtack" text="Carbon Credit" onClick={() => { navigate('/market') }}/>
+        <NavButton icon="thumbtack" text="Your Contribution" onClick={() => { navigate('/market/orders/') }}/>
         <hr />
         <NavButton icon="heart" text="WatchList" />
         <NavButton icon="chart-line" text="Trending" />
