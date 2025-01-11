@@ -1,6 +1,14 @@
 import os
 from fpdf import FPDF
 
+# Function to sanitize the text (replace or remove problematic characters)
+def sanitize_text(text, encoding='latin-1'):
+    # Try encoding the text to the specified encoding
+    try:
+        return text.encode(encoding, 'ignore').decode(encoding)
+    except UnicodeEncodeError:
+        return text.encode(encoding, 'replace').decode(encoding)
+
 # Function to convert multiple .txt files into a single PDF
 def txt_to_single_pdf(txt_directory, pdf_file):
     # Create a PDF instance
@@ -20,7 +28,8 @@ def txt_to_single_pdf(txt_directory, pdf_file):
             with open(txt_file_path, 'r', encoding='utf-8') as file:
                 lines = file.readlines()
                 for line in lines:
-                    pdf.multi_cell(0, 10, line)
+                    sanitized_line = sanitize_text(line)  # Sanitize the line
+                    pdf.multi_cell(0, 10, sanitized_line)  # Add sanitized line to PDF
             
             # Add a new line after each text file's content
             pdf.ln(10)  # Adjust the value to increase/decrease the space between files
