@@ -371,7 +371,7 @@ function MarketplacePage({ expanded }) {
     <div
       className={`min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 pb-14 min-h-screen bg-gradient-to-b from-green-50 to-white ${
         expanded ? "ml-64" : "ml-20"
-      }`}
+      } transition-all`}
     >
       <nav className=" text-green-800 p-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">

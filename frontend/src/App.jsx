@@ -14,6 +14,7 @@ import Navbar from "./components/ui/Navbar";
 import Market from "./components/marketplace/MarketplacePage";
 import MarketOrdersPage from "./components/marketplace/MarketOrdersPage";
 import AboutUs from "./components/AboutUs";
+import ChatBot from "./components/ChatBot";
 
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = document.cookie.includes("token=");
@@ -61,6 +62,8 @@ const AppContent = ({ setIsLogin, isLogin }) => {
         <Route path="/market/orders" element={<MarketOrdersPage  expanded={expanded}/>} />
 
         <Route path="/aboutUs" element={<AboutUs />} />
+
+        <Route path="/chatBot" element={<ChatBot expanded={expanded} />} />
 
         <Route
           path="/login"

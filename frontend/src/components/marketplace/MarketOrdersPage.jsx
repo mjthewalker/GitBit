@@ -88,7 +88,7 @@ const MarketOrdersPage = ({expanded}) => {
   };
 
   return (
-    <div       className={`justify-center py-6 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-green-50 to-white ${expanded ? "ml-64" : "ml-20"}`}>
+    <div       className={`justify-center py-6 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-green-50 to-white ${expanded ? "ml-64" : "ml-20"} transition-all`}>
       <MarketNav />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

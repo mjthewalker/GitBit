@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css"; // Import your custom CSS file
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Sprout } from "lucide-react";
 
 
 // Import Font Awesome Icons
@@ -16,6 +17,8 @@ import {
   faMagic,
   faGem,
   faCaretUp,
+  faHouse,
+  faCreditCard
 } from "@fortawesome/free-solid-svg-icons";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,7 +34,10 @@ library.add(
   faMagic,
   faGem,
   faCodepen,
-  faCaretUp
+  faCaretUp,
+  faHouse,
+  faCreditCard
+
 );
 
 const Navbar = ({ setExpanded }) => {
@@ -88,8 +94,10 @@ const Navbar = ({ setExpanded }) => {
       <div id="nav-header">
         {/* Navbar Title with Icon */}
         <a id="nav-title" target="_blank" rel="noopener noreferrer">
-          C<FontAwesomeIcon icon={["fab", "codepen"]} />
-          DEPEN
+          <div className="flex flex-row ml-3">
+
+        Sp<Sprout className="h-5 w-5 mt-2.5" />outUp
+        </div>
         </a>
 
         {/* Hamburger Menu for Mobile */}
@@ -107,7 +115,7 @@ const Navbar = ({ setExpanded }) => {
       <div id="nav-content">
         {/* Navigation Buttons */}
         <NavButton
-          icon="palette"
+          icon="fa-solid fa-house"
           text="Home"
           onClick={() => {
             navigate("/home");
@@ -117,22 +125,22 @@ const Navbar = ({ setExpanded }) => {
           icon="images"
           text="ChatBot"
           onClick={() => {
-            navigate("/home");
+            navigate("/chatBot");
           }}
         />
         <NavButton
-          icon="thumbtack"
+          icon="fa-solid fa-credit-card"
           text="Carbon Credit"
           onClick={() => {
             navigate("/market");
           }}
         />
         <hr />
-        <NavButton icon="heart" text="WatchList" />
+        {/* <NavButton icon="heart" text="WatchList" />
         <NavButton icon="chart-line" text="Trending" />
         <NavButton icon="fire" text="Challenges" />
         <NavButton icon="magic" text="Spark" />
-        <hr />
+        <hr /> */}
         <NavButton
           icon="gem"
           text="My Contribution"
