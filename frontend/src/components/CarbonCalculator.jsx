@@ -153,7 +153,7 @@ const CarbonCalculator = ({ expanded }) => {
   };
 
   return (
-    <div className={`justify-center py-6 min-h-screen bg-gradient-to-b from-green-50 to-white ${expanded ? "ml-64" : "ml-20"}`}>
+    <div className={`justify-center py-6 px-12 min-h-screen bg-gradient-to-b from-green-50 to-white ${expanded ? "ml-64" : "ml-20"} transition-all`}>
       <main className="max-w-7xl mx-auto px-4  py-8">
         <div className="flex items-center space-x-3 mb-8">
           <Cloud className="h-8 w-8 text-green-600" />

@@ -86,7 +86,6 @@ const Home = ({ expanded }) => {
   
     try {
       const response = await fetch(`http://localhost:8000/portfolio/add`, {
-        
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,8 +96,8 @@ const Home = ({ expanded }) => {
           amount: parseFloat(transactionForm.amount),
           quantity: parseFloat(transactionForm.quantity),
           assetCode: transactionForm.assetCode,
+          userId: user._id  // Add the userId to the request
         }),
-        
       });
       console.log(transactionForm);
   
@@ -113,9 +112,9 @@ const Home = ({ expanded }) => {
           quantity: "",
           transactionDate: new Date().toISOString().split("T")[0],
         });
-
+  
         // Refresh portfolio data
-        if (user?.id) {
+        if (user?._id) {
           const portfolioResponse = await fetch(
             `http://localhost:8000/portfolio/${user._id}`
           );
@@ -128,7 +127,8 @@ const Home = ({ expanded }) => {
         // Show success message
         alert("Transaction added successfully!");
       } else {
-        alert("Failed to add transaction. Please try again.");
+        const errorData = await response.json();
+        alert(errorData.message || "Failed to add transaction. Please try again.");
       }
     } catch (error) {
       console.error("Error adding transaction:", error);

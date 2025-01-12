@@ -20,7 +20,7 @@ import {
   faHouse,
   faCreditCard
 } from "@fortawesome/free-solid-svg-icons";
-import { faCodepen } from "@fortawesome/free-brands-svg-icons";
+import { faCodepen, faRocketchat } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Add the icons to the library
@@ -36,7 +36,8 @@ library.add(
   faCodepen,
   faCaretUp,
   faHouse,
-  faCreditCard
+  faCreditCard,
+  faRocketchat
 
 );
 
@@ -122,7 +123,7 @@ const Navbar = ({ setExpanded }) => {
           }}
         />
         <NavButton
-          icon="images"
+          icon="fa-brands fa-rocketchat"
           text="ChatBot"
           onClick={() => {
             navigate("/chatBot");
