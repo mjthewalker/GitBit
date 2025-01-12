@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css"; // Import your custom CSS file
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 
 // Import Font Awesome Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -33,6 +35,30 @@ library.add(
 );
 
 const Navbar = ({ setExpanded }) => {
+
+  const [user, setUser] = useState(null);
+
+    useEffect(() => {
+      const fetchUserData = async () => {
+        try {
+          const response = await fetch("http://localhost:8000/user/userData", {
+            method: "GET",
+            credentials: "include",
+          });
+  
+          if (response.ok) {
+            const data = await response.json();
+            // console.log("User data:", data);
+            setUser(data.user);
+          }
+        } catch (error) {
+          console.log("Network error:", error);
+        }
+
+      };
+      fetchUserData();
+    }, [user?._id]);
+
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
@@ -45,7 +71,7 @@ const Navbar = ({ setExpanded }) => {
       const data = await response.json();
       if (data.message === "Logged out successfully") {
         // Redirect to login page after successful logout
-        navigate("/login");
+        navigate("/aboutUs");
       } else {
         console.error("Logout failed");
       }
@@ -139,9 +165,9 @@ const Navbar = ({ setExpanded }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              uahnbu
+              {user?.fullName}
             </a>
-            <span id="nav-footer-subtitle">Admin</span>
+            <span id="nav-footer-subtitle">{user?.role}</span>
           </div>
 
           {/* Footer Toggle Icon */}

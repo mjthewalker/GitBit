@@ -186,7 +186,7 @@ def conv(stock):
   txt_directory = "./"  # Replace with your directory path
 
   # Output PDF file
-  pdf_file = "./output.pdf"  # Replace with your desired output PDF file path
+  pdf_file = "./routes/chat/output.pdf"  # Replace with your desired output PDF file path
 
   # Convert all text files into a single PDF with limits
   txt_to_single_pdf(txt_directory, pdf_file, max_pages=100, max_characters=200000)

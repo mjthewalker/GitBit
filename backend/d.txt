@@ -3,7 +3,7 @@ meta:
   status: 200
   copywrite: https://apicalls.io
   symbol: Quotes Data
-  processedTime: 2025-01-12T00:18:06.475613Z
+  processedTime: 2025-01-12T01:04:22.259285Z
 body:
   - Item 1:
     preMarketChange: None
@@ -21,40 +21,17 @@ body:
     quoteSourceName: Delayed Quote
     triggerable: True
     customPriceAlertConfidence: HIGH
+    currency: USD
+    exchange: NYQ
     corporateActions:
     regularMarketTime: 1736542802
-    shortName: Lockheed Martin Corporation
-    longName: Lockheed Martin Corporation
-    currency: USD
-    marketState: CLOSED
-    epsCurrentYear: 26.77688
-    priceEpsCurrentYear: 17.479631
-    sharesOutstanding: 237035008
-    bookValue: 30.508
-    fiftyDayAverage: 515.6688
-    fiftyDayAverageChange: -47.618835
-    fiftyDayAverageChangePercent: -0.09234383
-    twoHundredDayAverage: 512.7632
-    twoHundredDayAverageChange: -44.713196
-    twoHundredDayAverageChangePercent: -0.08720048
-    marketCap: 110944231424
-    forwardPE: 16.650658
-    priceToBook: 15.341877
-    sourceInterval: 15
-    exchangeDataDelayedBy: 0
-    averageAnalystRating: 2.3 - Buy
-    tradeable: False
-    cryptoTradeable: False
-    hasPrePostMarketData: True
-    exchange: NYQ
     messageBoardId: finmb_285827
     exchangeTimezoneName: America/New_York
     exchangeTimezoneShortName: EST
     gmtOffSetMilliseconds: -18000000
     market: us_market
     esgPopulated: False
-    regularMarketChangePercent: -0.170634
-    regularMarketPrice: 468.05
+    hasPrePostMarketData: True
     firstTradeDateMilliseconds: 221149800000
     priceHint: 2
     regularMarketChange: -0.800018
@@ -79,6 +56,11 @@ body:
     fiftyTwoWeekHighChangePercent: -0.24380001
     fiftyTwoWeekLow: 413.92
     fiftyTwoWeekHigh: 618.95
+    longName: Lockheed Martin Corporation
+    regularMarketChangePercent: -0.170634
+    regularMarketPrice: 468.05
+    marketState: CLOSED
+    shortName: Lockheed Martin Corporation
     fiftyTwoWeekChangePercent: 2.2300363
     dividendDate: 1735257600
     earningsTimestamp: 1738071000
@@ -94,6 +76,24 @@ body:
     dividendYield: 2.82
     epsTrailingTwelveMonths: 27.61
     epsForward: 28.11
+    epsCurrentYear: 26.77688
+    priceEpsCurrentYear: 17.479631
+    sharesOutstanding: 237035008
+    bookValue: 30.508
+    fiftyDayAverage: 515.6688
+    fiftyDayAverageChange: -47.618835
+    fiftyDayAverageChangePercent: -0.09234383
+    twoHundredDayAverage: 512.7632
+    twoHundredDayAverageChange: -44.713196
+    twoHundredDayAverageChangePercent: -0.08720048
+    marketCap: 110944231424
+    forwardPE: 16.650658
+    priceToBook: 15.341877
+    sourceInterval: 15
+    exchangeDataDelayedBy: 0
+    averageAnalystRating: 2.3 - Buy
+    tradeable: False
+    cryptoTradeable: False
     displayName: Lockheed Martin
     symbol: LMT
 
@@ -115,14 +115,7 @@ You wonât get: sales pitches, outlandish claims, greed-driven speculation
 This article was written by
 Analystâs Disclosure: I/we have no stock, option or similar derivative position in any of the companies mentioned, and no plans to initiate any such positions within the next 72 hours.  I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. 
 Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
-Dilok Klaisataporn/iStock via Getty Images
-Dilok Klaisataporn/iStock via Getty Images
-To earn a decent income from your savings has been a challenge for retirees for the past two decades. For almost a decade, the interest rates remained either zero or near zero. Only recently, in the last couple
-High Income DIY Portfolios: The primary goal of "High Income DIY Portfolios" Marketplace service is high income with low risk and preservation of capital. It provides DIY investors with vital information and portfolio/asset allocation strategies to help create stable, long-term passive income with sustainable yields. The portfolios are designed for Income-Investors (including retirees or near-retirees). We provide seven portfolios: 3 buy-and-hold, 3 Rotational portfolios, and 3-Bucket NPP Model Portfolio. This includes two High-Income portfolios, two DGI portfolios, and a conservative NPP strategy portfolio with low drawdowns and high growth. For more details or a two-week free trial, please click here. 
-This article was written by
-Financially Free Investor is a financial writer with 25 years investment experience. He focuses on investing in dividend-growing stocks with a long-term horizon. He applies a unique 3-basket investment approach that aims for 30% lower drawdowns, 6% current income, and market-beating growth on a long-term basis and he focuses on dividend-growing stocks with a long-term horizon.
-Analystâs Disclosure: I/we have a beneficial long position in the shares of ABT, ABBV, CI, JNJ, PFE, NVS, NVO, AZN, UNH, CL, CLX, UL, NSRGY, PG, TSN, ADM, BTI, MO, PM, KO, PEP, EXC, D, DEA, DEO, ENB, MCD, BAC, PRU, UPS, WMT, WBA, CVS, LOW, AAPL, IBM, CSCO, MSFT, INTC, T, VZ, CVX, XOM, VLO, ABB, ITW, MMM, LMT, LYB, RIO, O, NNN, WPC, ARCC, ARDC, AWF, CII, CHI, DNP, PEO, USA, UTF, UTG, RFI, RNP, RQI, EVT, EOS, FFC, GOF, TLT either through stock ownership, options, or other derivatives.  I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. Disclaimer: The information presented in this article is for informational purposes only and in no way should be construed as financial advice or recommendation to buy or sell any stock. The author is not a financial advisor. Please always do further research and do your own due diligence before making any investments. Every effort has been made to present the data/information accurately; however, the author does not claim 100% accuracy. The stock portfolios presented here are model portfolios for demonstration purposes. For the complete list of our LONG positions, please see our profile on Seeking Alpha.
-Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
+Error fetching the URL: 403 Client Error: Forbidden for url: https://seekingalpha.com/article/4748448-10-funds-to-retire-today-6000-monthly-income
 We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
 Lockheed Martin Corp.’s LMT business unit, Aeronautics, recently clinched a modification contract for the F-35 fighter aircraft. The award has been offered by the Naval Air Systems Command, Patuxent River, MD.
 Valued at $41.6 million, the contract is expected to be completed by March 2028. Per the terms of the deal, Lockheed will procure engineering, integration support, hardware, and installation support for flight test instrumentation modifications to F-35 production aircraft.
@@ -229,7 +222,11 @@ Zacks Investment Research
 Sign in to access your portfolio
 The nation’s second largest airline is playing catch-up to rivals after its bet to overhaul corporate travel failed.
 Sign in to access your portfolio
-Error fetching the URL: 403 Client Error: Forbidden for url: https://seekingalpha.com/article/4748423-lockheed-martin-recession-proof-your-portfolio-and-dividends-with-lmt
+Stocktrek/DigitalVision via Getty Images
+As a dividend growth investor, the goal of my portfolio is to one day be able to live off dividends. With that being said, I need to invest in companies who pay reliable, growing dividends, regardless of market conditions. We've all heard that the S&P 500
+This article was written by
+Analystâs Disclosure: I/we have no stock, option or similar derivative position in any of the companies mentioned, and no plans to initiate any such positions within the next 72 hours.  I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. 
+Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
 We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
 (Reuters) - Lockheed Martin delivered a total of 110 F-35 fighter jets to the United States and its allies in 2024, the Bethesda, Maryland-based defense contractor said in a statement on Wednesday.
 The delivery total achieves the higher end of the range of 75 to 110 jet deliveries CEO Jim Taiclet gave in an earnings call last summer.

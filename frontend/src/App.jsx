@@ -13,6 +13,7 @@ import Test from "./components/ui/Test";
 import Navbar from "./components/ui/Navbar";
 import Market from "./components/marketplace/MarketplacePage";
 import MarketOrdersPage from "./components/marketplace/MarketOrdersPage";
+import AboutUs from "./components/AboutUs";
 
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = document.cookie.includes("token=");
@@ -58,6 +59,8 @@ const AppContent = ({ setIsLogin, isLogin }) => {
         <Route path="/market" element={<Market expanded={expanded}/>} />
         
         <Route path="/market/orders" element={<MarketOrdersPage  expanded={expanded}/>} />
+
+        <Route path="/aboutUs" element={<AboutUs />} />
 
         <Route
           path="/login"
