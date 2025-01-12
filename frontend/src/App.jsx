@@ -12,9 +12,10 @@ import Home from "./components/Home";
 import Test from "./components/ui/Test";
 import Navbar from "./components/ui/Navbar";
 import Market from "./components/marketplace/MarketplacePage";
-import MarketOrdersPage from "./components/marketplace/MarketOrdersPage";
+import CarbonCalculator from "./components/CarbonCalculator";
 import AboutUs from "./components/AboutUs";
 import ChatBot from "./components/ChatBot";
+import MarketplacePage from "./components/marketplace/MarketplacePage";
 
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = document.cookie.includes("token=");
@@ -59,7 +60,7 @@ const AppContent = ({ setIsLogin, isLogin }) => {
 
         <Route path="/market" element={<Market expanded={expanded}/>} />
         
-        <Route path="/market/orders" element={<MarketOrdersPage  expanded={expanded}/>} />
+        <Route path="/footprint" element={<CarbonCalculator  expanded={expanded}/>} />
 
         <Route path="/aboutUs" element={<AboutUs />} />
 

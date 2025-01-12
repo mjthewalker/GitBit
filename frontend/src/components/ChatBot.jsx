@@ -7,6 +7,29 @@ export default function ChatBot({ expanded }) {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const [userId,setUserId] = useState("");
+  useEffect(() => {
+      const fetchUserData = async () => {
+        try {
+          const response = await fetch('http://localhost:8000/user/userData', {
+            method: 'GET',
+            credentials: 'include',
+          });
+  
+          if (response.ok) {
+            const data = await response.json();
+            setUserId(data.user._id);
+          } else {
+            console.log("Error fetching user data:", await response.json());
+          }
+        } catch (error) {
+          console.log("Network error:", error);
+        }
+      };
+  
+      fetchUserData();
+    }, []);
+
   const handleMessageSend = () => {
     if (input.trim()) {
       const userMessage = { type: "sent", text: input };
@@ -14,7 +37,7 @@ export default function ChatBot({ expanded }) {
 
       setIsLoading(true);
       axios
-        .post(`http://localhost:8000/chat/query/USER_ID`, { query: input })
+        .post(`http://localhost:8000/chat/query/${userId}`, { query: input })
         .then((response) => {
           const result = response.data.result;
           const chatAnswerIndex = result.indexOf("Chat Answer:");

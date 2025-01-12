@@ -143,9 +143,9 @@ const Navbar = ({ setExpanded }) => {
         <hr /> */}
         <NavButton
           icon="gem"
-          text="My Contribution"
+          text="My Footprint"
           onClick={() => {
-            navigate("/market/orders");
+            navigate("/footprint");
           }}
         />
 
