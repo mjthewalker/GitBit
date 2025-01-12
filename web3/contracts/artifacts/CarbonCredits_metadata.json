@@ -1,0 +1,574 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "holderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "creditsHeld",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pricepercredit",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "creditvalidityperiod",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "newCreditHolder",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "CreditHolders",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "holderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creditsHeld",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pricepercredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creditvalidityperiod",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "customers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "first_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "last_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllCustomers",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "first_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "last_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "email",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "contact",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CarbonCredits.customer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCreditHolders",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "holderId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creditsHeld",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pricepercredit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creditvalidityperiod",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "_addr",
+								"type": "address"
+							}
+						],
+						"internalType": "struct CarbonCredits.CarbonCreditHolder[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getCustomerProfile",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "first_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "last_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "email",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "contact",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CarbonCredits.customer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVerifiers",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "homeCountry",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reg_no",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "license_no",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "addr",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isExist",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CarbonCredits.verifier[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "holderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creditsHeld",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pricepercredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creditvalidityperiod",
+						"type": "uint256"
+					}
+				],
+				"name": "registerCreditHolder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "first_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "last_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "contact",
+						"type": "uint256"
+					}
+				],
+				"name": "registerCustomer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "homeCountry",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reg_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "license_no",
+						"type": "uint256"
+					}
+				],
+				"name": "registerVerifiers",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "verifiers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "homeCountry",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reg_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "license_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isExist",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/carboncredits.sol": "CarbonCredits"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/carboncredits.sol": {
+			"keccak256": "0xb4aae452b7d3ebe5e9f0cf561daf3c339298440a854e8eb6608cf1f893978661",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://c69d0ac15c486b5cad7a1c5428733e358c0a67d394098a04bce1fbd75c318c3b",
+				"dweb:/ipfs/QmPsLYYQd8aXrvmTmCAXf8tLVBQFzpa71oUMYmDSvv8ba6"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/access/Ownable.sol": {
+			"keccak256": "0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2",
+				"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		}
+	},
+	"version": 1
+}
