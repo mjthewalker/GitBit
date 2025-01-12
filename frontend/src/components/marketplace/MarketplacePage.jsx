@@ -369,7 +369,7 @@ function MarketplacePage({ expanded }) {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 pb-14 min-h-screen bg-gradient-to-b from-green-50 to-white ${
+      className={`min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 pb-14 px-10 min-h-screen bg-gradient-to-b from-green-50 to-white ${
         expanded ? "ml-64" : "ml-20"
       } transition-all`}
     >

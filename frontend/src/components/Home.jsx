@@ -259,7 +259,7 @@ const Home = ({ expanded }) => {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 pb-14 transition-all ${
+      className={`min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 pb-14 transition-all px-10 ${
         expanded ? "ml-64" : "ml-20"
       }`}
     >

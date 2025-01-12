@@ -47,7 +47,7 @@ export default function ChatBot({ expanded }) {
   return (
     <div
       className={`relative min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 ${
-        expanded ? "ml-72" : "ml-24"
+        expanded ? "ml-[21%]" : "ml-24"
       } transition-all `}
     >
       {/* Decorative Elements */}
