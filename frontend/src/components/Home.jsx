@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import StockAutocomplete from "./StockAutoComplete";
+import axios from "axios";
+
 import {
   Leaf,
   TreePine,
@@ -11,7 +14,6 @@ import {
 const CustomDropdown = ({ value, onChange, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const options = type === "asset" ? ["Stock", "Crypto", "Real Estate"] : ["Buy", "Sell"];
-
   const handleSelect = (option) => {
     onChange({ target: { name: type == "asset" ? "assetType" : "transactionType", value: option } });
     setIsOpen(false);
@@ -19,7 +21,6 @@ const CustomDropdown = ({ value, onChange, type }) => {
 
   return (
     <div className="relative">
-      {/* Selected Option */}
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="w-full cursor-pointer py-3 px-6 rounded-lg border border-green-200 bg-white/90 focus:ring-2 focus:ring-green-500 flex justify-between items-center"
@@ -66,11 +67,13 @@ const Home = ({ expanded }) => {
   const [isChatboxExpanded, setIsChatboxExpanded] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [isRequestSent, setIsRequestSent] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
   const [transactionForm, setTransactionForm] = useState({
     transactionType: "Buy",
     assetName: "",
     assetType: "",
+    assetCode: "",
     amount: "",
     quantity: "",
     transactionDate: new Date().toISOString().split("T")[0],
@@ -78,9 +81,10 @@ const Home = ({ expanded }) => {
 
   const handleTransactionSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await fetch(`http://localhost:8000/portfolio/add`, {
+        
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,15 +94,19 @@ const Home = ({ expanded }) => {
           ...transactionForm,
           amount: parseFloat(transactionForm.amount),
           quantity: parseFloat(transactionForm.quantity),
+          assetCode: transactionForm.assetCode,
         }),
+        
       });
-
+      console.log(transactionForm);
+  
       if (response.ok) {
         // Reset form
         setTransactionForm({
           transactionType: "Buy",
           assetName: "",
           assetType: "",
+          assetCode: "",
           amount: "",
           quantity: "",
           transactionDate: new Date().toISOString().split("T")[0],
@@ -107,14 +115,14 @@ const Home = ({ expanded }) => {
         // Refresh portfolio data
         if (user?.id) {
           const portfolioResponse = await fetch(
-            `http://localhost:8000/portfolio/${user.id}`
+            `http://localhost:8000/portfolio/${user._id}`
           );
           if (portfolioResponse.ok) {
             const data = await portfolioResponse.json();
             setPortfolio(data);
           }
         }
-
+  
         // Show success message
         alert("Transaction added successfully!");
       } else {
@@ -125,6 +133,7 @@ const Home = ({ expanded }) => {
       alert("Error adding transaction. Please try again.");
     }
   };
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setTransactionForm((prev) => ({
@@ -132,6 +141,33 @@ const Home = ({ expanded }) => {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    if (isChatboxExpanded && !isRequestSent) { // Check if the request has not been sent yet
+      axios.post(`http://localhost:8000/chat/query/${user._id}`)
+        .then((response) => {
+          console.log("Initial request sent", response.data);
+          setIsRequestSent(true); // Mark the request as sent
+        })
+        .catch((error) => {
+          console.error("Error sending initial request:", error);
+        });
+    }
+  }, [isChatboxExpanded, isRequestSent]);
+
+  
+
+  useEffect(() => {
+    if (isChatboxExpanded) {
+      axios.post(`http://localhost:8000/chat/query/${user._id}`)
+        .then((response) => {
+          console.log("Initial request sent", response.data);
+        })
+        .catch((error) => {
+          console.error("Error sending initial request:", error);
+        });
+    }
+  }, [isChatboxExpanded]);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -143,7 +179,8 @@ const Home = ({ expanded }) => {
 
         if (response.ok) {
           const data = await response.json();
-          // console.log("User data:", data);
+          console.log("User data:", data);
+
           setUser(data.user);
         }
       } catch (error) {
@@ -186,17 +223,17 @@ const Home = ({ expanded }) => {
 
   const handleMessageSend = () => {
     if (input.trim()) {
-      setMessages([...messages, { text: input, type: "sent" }]);
+      axios.post(`http://localhost:8000/chat/query/${user._id}`, { query: input })
+        .then((response) => {
+          console.log("Query response:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error sending query:", error);
+        });
+
+      const newMessage = { type: "sent", text: input };
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
       setInput("");
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: "Hello! How can I help you with your sustainable investments today?",
-            type: "received",
-          },
-        ]);
-      }, 1000);
     }
   };
 
@@ -479,36 +516,22 @@ const Home = ({ expanded }) => {
                     <label className="block text-sm font-medium text-green-700 mb-2">
                       Transaction Type
                     </label>
-                    {/* <select
-                      name="transactionType"
-                      value={transactionForm.transactionType}
-                      onChange={handleInputChange}
-                      className="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white/90"
-                      required
-                    >
-                      <option value="Buy">Buy</option>
-                      <option value="Sell">Sell</option>
-                    </select> */}
                     <CustomDropdown
                       value={transactionForm.transactionType}
                       onChange={handleInputChange}
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-green-700 mb-2">
-                      Asset Name
-                    </label>
-                    <input
-                      type="text"
-                      name="assetName"
+                  <StockAutocomplete
                       value={transactionForm.assetName}
-                      onChange={handleInputChange}
-                      className="w-full p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white/90"
-                      required
-                      placeholder="e.g., Green Energy ETF"
+                      onChange={({ assetName, assetCode }) => {
+                        setTransactionForm(prev => ({
+                          ...prev,
+                          assetName,
+                          assetCode
+                        }));
+                      }}
                     />
-                  </div>
 
                   <div>
                     <label className="block text-sm font-medium text-green-700 mb-2">
@@ -587,65 +610,66 @@ const Home = ({ expanded }) => {
 
       {/* Chatbox */}
       <div className="w-full max-w-lg fixed bottom-6 right-6">
-        {isChatboxExpanded && (
-          <button
-            className="mb-4 px-3 py-1 bg-green-600 text-white rounded-lg flex items-center gap-1 hover:bg-green-700 transition-colors"
-            onClick={toggleChatbox}
-          >
-            <ChevronDown className="h-4 w-4" />
-            Minimize
-          </button>
-        )}
-
-        <div
-          className={`w-full bg-white/90 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-green-100 transition-all ${
-            isChatboxExpanded ? "h-96" : "hidden"
-          }`}
+      {isChatboxExpanded && (
+        <button
+          className="mb-4 px-3 py-1 bg-green-600 text-white rounded-lg flex items-center gap-1 hover:bg-green-700 transition-colors"
+          onClick={toggleChatbox}
         >
-          <div className="h-full flex flex-col">
-            <div className="flex flex-col p-4 overflow-y-auto">
-              {messages.length === 0 && (
-                <div className="text-center text-gray-600 mt-[35%]">
-                  No messages yet...
-                </div>
-              )}
-              {messages.map((msg, index) => (
-                <div
-                  key={index}
-                  className={`p-3 rounded-lg break-words mb-2  ${
-                    msg.type === "sent"
-                      ? "bg-green-600 text-white ml-auto flex-end"
-                      : "bg-gray-100 text-green-800 mr-auto flex-start"
-                  }`}
-                  style={{
-                    display: "inline-block", // Ensures the box adjusts to the content
-                    maxWidth: "55%", // Restricts the width to 50% of the parent
-                  }}
-                >
-                  {msg.text}
-                </div>
-              ))}
-            </div>
+          <ChevronDown className="h-4 w-4" />
+          Minimize
+        </button>
+      )}
+
+      <div
+        className={`w-full bg-white/90 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-green-100 transition-all ${
+          isChatboxExpanded ? "h-96" : "hidden"
+        }`}
+      >
+        <div className="h-full flex flex-col">
+          <div className="flex flex-col p-4 overflow-y-auto">
+            {messages.length === 0 && (
+              <div className="text-center text-gray-600 mt-[35%]">
+                No messages yet...
+              </div>
+            )}
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`p-3 rounded-lg break-words mb-2 ${
+                  msg.type === "sent"
+                    ? "bg-green-600 text-white ml-auto flex-end"
+                    : "bg-gray-100 text-green-800 mr-auto flex-start"
+                }`}
+                style={{
+                  display: "inline-block", // Ensures the box adjusts to the content
+                  maxWidth: "55%", // Restricts the width to 50% of the parent
+                }}
+              >
+                {msg.text}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="mt-4 flex items-center gap-2">
-          <input
-            type="text"
-            className="flex-1 p-3 rounded-lg border border-green-200 bg-white/90 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onClick={() => setIsChatboxExpanded(true)}
-            placeholder="Ask about sustainable investing..."
-            onKeyPress={(e) => e.key === "Enter" && handleMessageSend()}
-          />
-          <button
-            onClick={handleMessageSend}
-            className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-          >
-            <Send className="h-5 w-5" />
-          </button>
-        </div>
       </div>
+
+      <div className="mt-4 flex items-center gap-2">
+        <input
+          type="text"
+          className="flex-1 p-3 rounded-lg border border-green-200 bg-white/90 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onClick={() => setIsChatboxExpanded(true)}
+          placeholder="Ask about sustainable investing..."
+          onKeyPress={(e) => e.key === "Enter" && handleMessageSend()}
+        />
+        <button
+          onClick={handleMessageSend}
+          className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+        >
+          <Send className="h-5 w-5" />
+        </button>
+      </div>
+    </div>
     </div>
   );
 };

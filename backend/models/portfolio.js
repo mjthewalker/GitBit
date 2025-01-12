@@ -18,6 +18,10 @@ const portfolioSchema = new mongoose.Schema(
           type: String, // Name of the investment (e.g., stock, real estate, etc.)
           required: true,
         },
+        assetCode: {
+          type: String, // Ticker symbol or unique code
+          required: false,
+        },
         assetType: {
           type: String, // e.g., "Stock", "Crypto", "Real Estate", etc.
           required: true,

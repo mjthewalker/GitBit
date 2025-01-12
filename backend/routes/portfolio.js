@@ -6,46 +6,12 @@ const router = Router();
 
 const Portfolio = require("../models/portfolio"); // Import the Portfolio model
 
-
-// // POST route to add portfolio data
-// router.post("/add", async (req, res) => {
-//   try {
-//     const { userId, totalValue, investments, transactions, riskProfile } = req.body;
-
-//     // Create a new Portfolio document
-//     const newPortfolio = new Portfolio({
-//       userId,
-//       totalValue,
-//       investments,
-//       transactions,
-//       riskProfile,
-//       lastUpdated: new Date()
-//     });
-
-//     // Save to database
-//     await newPortfolio.save();
-
-//     res.status(201).json({
-//       success: true,
-//       message: "Portfolio data added successfully",
-//       portfolio: newPortfolio
-//     });
-//   } catch (error) {
-//     console.error("Error adding portfolio data:", error.message);
-//     res.status(500).json({
-//       success: false,
-//       message: "Failed to add portfolio data",
-//       error: error.message
-//     });
-//   }
-// });
-
-// module.exports = router;
-
 router.post("/add", async (req, res) => {
     try {
-      const { transactionType, assetName, assetType, amount, quantity, transactionDate } = req.body;
+      const { transactionType, assetName, assetType, amount, quantity, transactionDate,assetCode } = req.body;
       
+      console.log(req.body);
+
       // Temporary: Get the first portfolio in the database
       // In production, this should use proper authentication
       const portfolio = await Portfolio.findOne();
@@ -61,6 +27,7 @@ router.post("/add", async (req, res) => {
       const newTransaction = {
         transactionType,
         assetName,
+        assetCode,
         assetType,
         amount: parseFloat(amount),
         quantity: parseFloat(quantity),
@@ -86,6 +53,7 @@ router.post("/add", async (req, res) => {
           portfolio.investments.push({
             assetName,
             assetType,
+            assetCode,
             amountInvested: parseFloat(amount),
             currentValue: parseFloat(amount), // For simplicity, using amount as current value
             quantity: parseFloat(quantity),

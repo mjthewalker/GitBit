@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const User = require("../models/user");
+const Portfolio = require("../models/portfolio");
 
 const router = Router();
 
@@ -48,8 +49,23 @@ router.post("/signup", async (req, res) => {
     }
 
     // Create a new user
-    await User.create({ fullName, email, password });
-    return res.status(201).json({ message: "Signup successful. You can now sign in." });
+    const newUser = await User.create({ fullName, email, password });
+
+    // Create a new portfolio for the user
+    const newPortfolio = await Portfolio.create({
+      userId: newUser._id, // Link portfolio to the user
+      totalValue: 0, // Initial portfolio value
+      investments: [], // Empty investments array
+      transactions: [], // Empty transactions array
+      riskProfile: "Medium", // Default risk profile
+    });
+
+    // Return response
+    return res.status(201).json({ 
+      message: "Signup successful. You can now sign in.", 
+      user: newUser,
+      portfolio: newPortfolio,
+    });
   } catch (error) {
     console.error(error);  // Log the error details for debugging purposes
     return res.status(500).json({

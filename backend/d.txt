@@ -1,0 +1,240 @@
+meta:
+  version: v1.0
+  status: 200
+  copywrite: https://apicalls.io
+  symbol: Quotes Data
+  processedTime: 2025-01-12T00:18:06.475613Z
+body:
+  - Item 1:
+    preMarketChange: None
+    preMarketChangePercent: None
+    preMarketPrice: None
+    preMarketTime: None
+    postMarketChange: -0.19998169
+    postMarketChangePercent: -0.042726565
+    postMarketPrice: 467.85
+    postMarketTime: 1736557200
+    language: en-US
+    region: US
+    quoteType: EQUITY
+    typeDisp: Equity
+    quoteSourceName: Delayed Quote
+    triggerable: True
+    customPriceAlertConfidence: HIGH
+    corporateActions:
+    regularMarketTime: 1736542802
+    shortName: Lockheed Martin Corporation
+    longName: Lockheed Martin Corporation
+    currency: USD
+    marketState: CLOSED
+    epsCurrentYear: 26.77688
+    priceEpsCurrentYear: 17.479631
+    sharesOutstanding: 237035008
+    bookValue: 30.508
+    fiftyDayAverage: 515.6688
+    fiftyDayAverageChange: -47.618835
+    fiftyDayAverageChangePercent: -0.09234383
+    twoHundredDayAverage: 512.7632
+    twoHundredDayAverageChange: -44.713196
+    twoHundredDayAverageChangePercent: -0.08720048
+    marketCap: 110944231424
+    forwardPE: 16.650658
+    priceToBook: 15.341877
+    sourceInterval: 15
+    exchangeDataDelayedBy: 0
+    averageAnalystRating: 2.3 - Buy
+    tradeable: False
+    cryptoTradeable: False
+    hasPrePostMarketData: True
+    exchange: NYQ
+    messageBoardId: finmb_285827
+    exchangeTimezoneName: America/New_York
+    exchangeTimezoneShortName: EST
+    gmtOffSetMilliseconds: -18000000
+    market: us_market
+    esgPopulated: False
+    regularMarketChangePercent: -0.170634
+    regularMarketPrice: 468.05
+    firstTradeDateMilliseconds: 221149800000
+    priceHint: 2
+    regularMarketChange: -0.800018
+    regularMarketDayHigh: 471.59
+    regularMarketDayRange: 465.73 - 471.59
+    regularMarketDayLow: 465.73
+    regularMarketVolume: 952664
+    regularMarketPreviousClose: 468.85
+    bid: 467.01
+    ask: 471.8
+    bidSize: 8
+    askSize: 18
+    fullExchangeName: NYSE
+    financialCurrency: USD
+    regularMarketOpen: 468
+    averageDailyVolume3Month: 1213218
+    averageDailyVolume10Day: 997440
+    fiftyTwoWeekLowChange: 54.129974
+    fiftyTwoWeekLowChangePercent: 0.13077399
+    fiftyTwoWeekRange: 413.92 - 618.95
+    fiftyTwoWeekHighChange: -150.90002
+    fiftyTwoWeekHighChangePercent: -0.24380001
+    fiftyTwoWeekLow: 413.92
+    fiftyTwoWeekHigh: 618.95
+    fiftyTwoWeekChangePercent: 2.2300363
+    dividendDate: 1735257600
+    earningsTimestamp: 1738071000
+    earningsTimestampStart: 1738071000
+    earningsTimestampEnd: 1738071000
+    earningsCallTimestampStart: 1738080000
+    earningsCallTimestampEnd: 1738080000
+    isEarningsDateEstimate: False
+    trailingAnnualDividendRate: 12.6
+    trailingPE: 16.95219
+    dividendRate: 13.2
+    trailingAnnualDividendYield: 0.026874267
+    dividendYield: 2.82
+    epsTrailingTwelveMonths: 27.61
+    epsForward: 28.11
+    displayName: Lockheed Martin
+    symbol: LMT
+
+Sundry Photography
+If you think technical analysis is silly, thanks for reading this far. Now, you might want to exit. I aim to educate, and when I see the charts speak to me as they are doing now for aerospace giant Lockheed Martin Corp. (
+
+SUNGARDEN YARP PORTFOLIO
+By Rob Isbitts and Sungarden Investment Publishing
+A community dedicated to navigating modern markets with consistency, discipline and humility
+Full Access $1,500/year
+Legacy pricing of $975 for first 35 subscribers, a savings of 35%
+Direct access to Rob and his live YARP portfolio, featuring a trademarked stock selection process he developed as a private portfolio and fund manager, and his decades of technical analysis experience.Â 
+24/7 access to Sungardenâs investment research deck
+Bottom-line analysis of stocks, ETFs, and option strategies
+Trade alerts and rationale, delivered in real-time
+Proprietary educational content
+You wonât get: sales pitches, outlandish claims, greed-driven speculation
+
+This article was written by
+Analystâs Disclosure: I/we have no stock, option or similar derivative position in any of the companies mentioned, and no plans to initiate any such positions within the next 72 hours.  I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. 
+Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
+Dilok Klaisataporn/iStock via Getty Images
+Dilok Klaisataporn/iStock via Getty Images
+To earn a decent income from your savings has been a challenge for retirees for the past two decades. For almost a decade, the interest rates remained either zero or near zero. Only recently, in the last couple
+High Income DIY Portfolios: The primary goal of "High Income DIY Portfolios" Marketplace service is high income with low risk and preservation of capital. It provides DIY investors with vital information and portfolio/asset allocation strategies to help create stable, long-term passive income with sustainable yields. The portfolios are designed for Income-Investors (including retirees or near-retirees). We provide seven portfolios: 3 buy-and-hold, 3 Rotational portfolios, and 3-Bucket NPP Model Portfolio. This includes two High-Income portfolios, two DGI portfolios, and a conservative NPP strategy portfolio with low drawdowns and high growth. For more details or a two-week free trial, please click here. 
+This article was written by
+Financially Free Investor is a financial writer with 25 years investment experience. He focuses on investing in dividend-growing stocks with a long-term horizon. He applies a unique 3-basket investment approach that aims for 30% lower drawdowns, 6% current income, and market-beating growth on a long-term basis and he focuses on dividend-growing stocks with a long-term horizon.
+Analystâs Disclosure: I/we have a beneficial long position in the shares of ABT, ABBV, CI, JNJ, PFE, NVS, NVO, AZN, UNH, CL, CLX, UL, NSRGY, PG, TSN, ADM, BTI, MO, PM, KO, PEP, EXC, D, DEA, DEO, ENB, MCD, BAC, PRU, UPS, WMT, WBA, CVS, LOW, AAPL, IBM, CSCO, MSFT, INTC, T, VZ, CVX, XOM, VLO, ABB, ITW, MMM, LMT, LYB, RIO, O, NNN, WPC, ARCC, ARDC, AWF, CII, CHI, DNP, PEO, USA, UTF, UTG, RFI, RNP, RQI, EVT, EOS, FFC, GOF, TLT either through stock ownership, options, or other derivatives.  I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. Disclaimer: The information presented in this article is for informational purposes only and in no way should be construed as financial advice or recommendation to buy or sell any stock. The author is not a financial advisor. Please always do further research and do your own due diligence before making any investments. Every effort has been made to present the data/information accurately; however, the author does not claim 100% accuracy. The stock portfolios presented here are model portfolios for demonstration purposes. For the complete list of our LONG positions, please see our profile on Seeking Alpha.
+Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+Lockheed Martin Corp.’s LMT business unit, Aeronautics, recently clinched a modification contract for the F-35 fighter aircraft. The award has been offered by the Naval Air Systems Command, Patuxent River, MD.
+Valued at $41.6 million, the contract is expected to be completed by March 2028. Per the terms of the deal, Lockheed will procure engineering, integration support, hardware, and installation support for flight test instrumentation modifications to F-35 production aircraft.
+The majority of work related to this deal will be carried out in Fort Worth, TX.
+Global defense spending has surged as nations strengthen their military capabilities, driving demand for advanced weaponry like fighter jets, which are essential for air combat. This trend has significantly benefited Lockheed, a leading manufacturer of combat aircraft, through steady orders from the Pentagon and U.S. allies.
+Lockheed’s F-35 fighter jet, renowned as the most advanced fifth-generation aircraft, stands out for its mission readiness and cutting-edge technology. Equipped with advanced sensors and communication systems, the F-35 seamlessly connects air, land, sea, space and cyber domains, enhancing situational awareness.
+These exceptional features have fueled strong demand for this jet. As of Sept. 30, 2024, Lockheed had delivered 1,040 F-35 aircraft since the program's inception. The recent contract win underscores the sustained popularity of the F-35 in the global combat jet market, further solidifying its position as a cornerstone of modern air defense systems.
+Rising military conflicts, terrorism and border disputes, along with rapid technological advancements in combat jets, have led nations to increase their defense spending on combat-proven jets, which constitute an integral part of their defense structure.
+This is likely to have prompted the Mordor Intelligence firm to forecast a compound annual growth rate of 3.7% for the global fighter aircraft market during the 2024-2029 period.
+Such strong market prospects drive growth opportunities for Lockheed, backed by its robust portfolio of combat jets, including the F-16, F-22 and F-21 aircraft, in addition to the F-35 jet.
+Other defense companies that are likely to benefit from the expanding global fighter aircraft market are discussed below.
+Northrop Grumman Corporation NOC: It is a leading provider of manned and unmanned air systems. It builds some of the world’s most advanced aircraft, such as the E-2C Hawkeye 2000, A-10 Thunderbolt II, F-5 Tiger Fighter Jet and many more.
+Northrop has a long-term (three to five years) earnings growth rate of 19%. The Zacks Consensus Estimate for NOC’s 2025 sales indicates growth of 3.4% from the year-ago estimated figure.
+Embraer ERJ: The company offers a comprehensive portfolio of the most advanced aircraft in the combat market, which includes the A-29 Super Tucano light attack and advanced trainer and the C-390 Millennium military multi-mission aircraft.
+The Zacks Consensus Estimate for ERJ’s 2025 sales indicates growth of 18.3% from the prior-year estimated number. The stock boasts a solid average earnings surprise of 127.28% for the trailing four quarters.
+Textron TXT: Its Textron Aviation Defense unit offers the largest and most successful flight training system in the world. Textron Aviation Defense’s portfolio includes the Beechcraft AT-6E Wolverine jet, which covers a wide-mission spectrum including training, manned Intelligence Surveillance and Reconnaissance as well as light precision attack.
+Textron has a long-term earnings growth rate of 10.1%. The Zacks Consensus Estimate for TXT’s 2025 sales indicates growth of 7.4% from the year-ago estimated figure.
+Shares of LMT have gained 1.7% in the past six months against the industry’s 0.9% decline.
+Image Source: Zacks Investment Research
+LMT currently carries a Zacks Rank #3 (Hold). You can see the complete list of today’s Zacks #1 Rank (Strong Buy) stocks here.
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+Lockheed Martin Corporation (LMT) : Free Stock Analysis Report
+Northrop Grumman Corporation (NOC) : Free Stock Analysis Report
+Embraer-Empresa Brasileira de Aeronautica (ERJ) : Free Stock Analysis Report
+Textron Inc. (TXT) : Free Stock Analysis Report
+To read this article on Zacks.com click here.
+Zacks Investment Research
+Sign in to access your portfolio
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+RTX Corporation’s RTX unit, Raytheon, recently secured a $333.3 million contract for facilitating the full-rate production of Standard Missile-6 (SM-6). RTX will also supply spares and a round design agent for SM-6 under this agreement.
+The majority of the work related to this contract will be performed in Tucson, AZ, and Huntsville, AL. This contract is projected to be completed by October 2027.The award has been provided by the Naval Sea Systems Command, Washington, D.C. This contract includes options that, if exercised, will bring the total value of the agreement to $908.1 million.
+With countries worldwide enhancing their defense capabilities, spending on advanced military arms and ammunition, including missiles and missile systems, has been rapidly increasing. RTX, as a prominent manufacturer of missile systems, has been benefiting from a steady flow of orders from the Pentagon and other U.S. allies. The recent contract is an example of that.RTX's SM-6 missile is an advanced and versatile defense system for naval ships. It can handle multiple missions, including defending against air attacks, surface threats and ballistic missiles, making it highly effective in protecting fleets. Its advanced design combines reliable technology to provide strong and cost-effective defense for the U.S. Navy and its allies.Such impressive features of this missile must have enabled the company to deliver more than 500 of SM-6 missiles to the U.S. Navy, which reflects the solid demand it enjoys in the missile market.
+Rising military conflicts, terrorism and border disputes have led nations to increase their focus on national security, particularly on missile defense systems in recent times, backed by the rapid development of advanced missile technologies over the last decade.This is likely to have prompted the Mordor Intelligence firm to forecast a compound annual growth rate of 5% for the global missiles and missile defense system market during the 2025-2030 period.Such massive growth projections offer a strategic advantage to RTX, which has a handful of combat-proven missiles in its product portfolio, like the TOW missile, Guidance Enhanced Missile, Advanced Medium Range Air-to-Air Missile, Tomahawk, Standard Missile 2 and a few more, in addition to the SM-6.
+Other defense companies that are likely to enjoy the perks of the expanding missiles and missile system market have been discussed below:Northrop Grumman NOC: Northrop Grumman provides high-speed, long-range strike weapons like the AARGM-ER, which is a supersonic, air-launched tactical missile system. It also develops and builds advanced missile defense technology, ranging from command systems to directed energy weapons, advanced munitions and powerful sensors.The company’s long-term (three to five years) earnings growth rate is 19%. The Zacks Consensus Estimate for NOC’s 2025 sales indicates year-over-year growth of 3.4%.The Boeing Company BA: It manufactures various missile defense systems, including the Ground-based Midcourse Defense, Aegis Ballistic Missile Defense and Avenger. Boeing-built and supported air and missile defense systems have been protecting its customers for nearly 25 years against threats ranging from intercontinental ballistic missiles to hostile aircraft.The company has a long-term earnings growth rate of 19.3%. The Zacks Consensus Estimate for BA’s 2025 sales indicates year-over-year growth of 22.1%.Lockheed Martin LMT: Lockheed Martin’s missile defense program includes the Patriot Advanced Capability-3 and Terminal High-Altitude Area Defense air and missile defense programs. It also manufactures the Multiple Launch Rocket System, the Joint Air-to-Surface Standoff Missile and Javelin tactical missile programs alongside other tactical missiles.The company has a long-term earnings growth rate of 4.4%. The Zacks Consensus Estimate for LMT’s 2025 sales indicates year-over-year growth of 4.1%.
+RTX shares have risen 15.2% in the past six months against the industry’s 0.9% decline.
+Image Source: Zacks Investment Research
+RTX currently carries a Zacks Rank #3 (Hold). You can see the complete list of today’s Zacks #1 Rank (Strong Buy) stocks here.
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+The Boeing Company (BA) : Free Stock Analysis Report
+Lockheed Martin Corporation (LMT) : Free Stock Analysis Report
+Northrop Grumman Corporation (NOC) : Free Stock Analysis Report
+RTX Corporation (RTX) : Free Stock Analysis Report
+To read this article on Zacks.com click here.
+Zacks Investment Research
+Sign in to access your portfolio
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+Lockheed Martin (LMT) has been one of the most searched-for stocks on Zacks.com lately. So, you might want to look at some of the facts that could shape the stock's performance in the near term.
+Over the past month, shares of this aerospace and defense company have returned -7%, compared to the Zacks S&P 500 composite's -2.7% change. During this period, the Zacks Aerospace - Defense industry, which Lockheed falls in, has lost 2.3%. The key question now is: What could be the stock's future direction?
+Although media reports or rumors about a significant change in a company's business prospects usually cause its stock to trend and lead to an immediate price change, there are always certain fundamental factors that ultimately drive the buy-and-hold decision.
+Here at Zacks, we prioritize appraising the change in the projection of a company's future earnings over anything else. That's because we believe the present value of its future stream of earnings is what determines the fair value for its stock.
+We essentially look at how sell-side analysts covering the stock are revising their earnings estimates to reflect the impact of the latest business trends. And if earnings estimates go up for a company, the fair value for its stock goes up. A higher fair value than the current market price drives investors' interest in buying the stock, leading to its price moving higher. This is why empirical research shows a strong correlation between trends in earnings estimate revisions and near-term stock price movements.
+Lockheed is expected to post earnings of $6.58 per share for the current quarter, representing a year-over-year change of -16.7%. Over the last 30 days, the Zacks Consensus Estimate has changed +0.2%.
+The consensus earnings estimate of $26.68 for the current fiscal year indicates a year-over-year change of -4.1%. This estimate has changed -0.1% over the last 30 days.
+For the next fiscal year, the consensus earnings estimate of $28.03 indicates a change of +5.1% from what Lockheed is expected to report a year ago. Over the past month, the estimate has changed -0.1%.
+With an impressive externally audited track record, our proprietary stock rating tool -- the Zacks Rank -- is a more conclusive indicator of a stock's near-term price performance, as it effectively harnesses the power of earnings estimate revisions. The size of the recent change in the consensus estimate, along with three other factors related to earnings estimates, has resulted in a Zacks Rank #3 (Hold) for Lockheed.
+The chart below shows the evolution of the company's forward 12-month consensus EPS estimate:
+While earnings growth is arguably the most superior indicator of a company's financial health, nothing happens as such if a business isn't able to grow its revenues. After all, it's nearly impossible for a company to increase its earnings for an extended period without increasing its revenues. So, it's important to know a company's potential revenue growth.
+For Lockheed, the consensus sales estimate for the current quarter of $18.85 billion indicates a year-over-year change of -0.1%. For the current and next fiscal years, $71.27 billion and $74.17 billion estimates indicate +5.5% and +4.1% changes, respectively.
+Lockheed reported revenues of $17.1 billion in the last reported quarter, representing a year-over-year change of +1.3%. EPS of $6.84 for the same period compares with $6.77 a year ago.
+Compared to the Zacks Consensus Estimate of $17.28 billion, the reported revenues represent a surprise of -1.05%. The EPS surprise was +5.72%.
+The company beat consensus EPS estimates in each of the trailing four quarters. The company topped consensus revenue estimates three times over this period.
+Without considering a stock's valuation, no investment decision can be efficient. In predicting a stock's future price performance, it's crucial to determine whether its current price correctly reflects the intrinsic value of the underlying business and the company's growth prospects.
+Comparing the current value of a company's valuation multiples, such as its price-to-earnings (P/E), price-to-sales (P/S), and price-to-cash flow (P/CF), to its own historical values helps ascertain whether its stock is fairly valued, overvalued, or undervalued, whereas comparing the company relative to its peers on these parameters gives a good sense of how reasonable its stock price is.
+The Zacks Value Style Score (part of the Zacks Style Scores system), which pays close attention to both traditional and unconventional valuation metrics to grade stocks from A to F (an An is better than a B; a B is better than a C; and so on), is pretty helpful in identifying whether a stock is overvalued, rightly valued, or temporarily undervalued.
+Lockheed is graded B on this front, indicating that it is trading at a discount to its peers. Click here to see the values of some of the valuation metrics that have driven this grade.
+The facts discussed here and much other information on Zacks.com might help determine whether or not it's worthwhile paying attention to the market buzz about Lockheed. However, its Zacks Rank #3 does suggest that it may perform in line with the broader market in the near term.
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+Lockheed Martin Corporation (LMT) : Free Stock Analysis Report
+To read this article on Zacks.com click here.
+Zacks Investment Research
+Sign in to access your portfolio
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+Airbus SE EADSY secured a contract to provide logistics support and engineering services for the UH-72 Lakota helicopter. The award has been offered by the Army Contracting Command, Redstone Arsenal, AL.Valued at $315 million, the contract is expected to be completed by Dec. 31, 2025. The majority of the work related to this deal will be carried out in Grand Prairie, TX.
+As nations are upgrading their defense capabilities, expenditures on cutting-edge defense equipment and ammunition have been rising quickly. Increasing expenditures on military helicopters, which are essential for air combat operations, contribute to the rising defense expenditures. As a leading manufacturer of combat helicopters, Airbus has received a steady stream of orders from all over the world.More than 140 armed forces worldwide rely on Airbus for its expertise to produce high-quality multi-role helicopters. These copters are able to fulfill a wide range of operational military roles, such as armed reconnaissance, utility, attack, naval, maritime and special operations.In particular, EADSY’s UH-72 Lakota is a highly adaptable and reconfigurable helicopter capable of carrying out a wide range of tasks under a variety of climates and environments. Its missions are as diverse as its operational locations, encompassing training, general utility, search and rescue, reconnaissance, medical evacuation, disaster response, homeland security, counterdrug, command and control, and VIP transportation.
+Amid rising military conflicts, terrorism and border disputes, these combat-proven helicopters play a critical role in a country's security system. This is likely to have prompted the Mordor Intelligence firm to forecast a compound annual growth rate of 2.9% for the military helicopter market during the 2024-2030 period. Such growth opportunities offered by the aforementioned market should bode well for Airbus.EADSY’s product portfolio consists of varied combat helicopters, such as the H125M, H160M, H175M, H215M, H225M, Tiger, NH90 and a few more. These enjoy solid demand in the global military helicopter market, with some 19,000 helicopters delivered across 150 nations.
+Other defense companies that are expected to enjoy the perks of the expanding military helicopter market have been discussed below:Boeing BA: The company’s helicopters are renowned for their leading-edge, relevant solutions that provide capacity. Boeing’s product portfolio includes combat helicopters and rotorcraft like the H-47 Chinook, AH-64 Apache, AH-6 Little Bird and V-22 Osprey.Boeing has a long-term (three to five years) earnings growth rate of 19.3%. The Zacks Consensus Estimate for BA’s 2025 sales indicates an improvement of 21.9% from the 2024 estimated figure.Textron TXT: Its Bell business segment supplies advanced military helicopters and provides parts and support services to the U.S. Government and military customers outside the United States. Its portfolio of combat helicopters includes Bell 412M, Bell 429M, Bell 407M and Bell 505M. TXT boasts a long-term earnings growth rate of 10.1%. The Zacks Consensus Estimate for TXT’s 2025 sales indicates year-over-year growth of 7.4% from the 2024 estimated figure.Lockheed Martin LMT: Its Sikorsky business unit provides military and rotary-wing aircraft to all five branches of the U.S. armed forces, along with military services and commercial operators in 40 nations. Some of LMT’s renowned products are Armed Black Hawk, CH-53K, MH-60R SEAHAWK, Raider X, S-97 Raider, S-70 BLACK Hawk, etc.Lockheed boasts a long-term earnings growth rate of 4.4%. The Zacks Consensus Estimate for LMT’s 2025 sales indicates an improvement of 3.9% from the 2024 estimated figure.
+In the past six months, Airbus shares have risen 13.1% compared to the industry’s fall of 1.7%.
+Image Source: Zacks Investment Research
+Airbus currently carries a Zacks Rank #4 (Sell).You can see the complete list of today’s Zacks #1 Rank (Strong Buy) stocks here.
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+The Boeing Company (BA) : Free Stock Analysis Report
+Lockheed Martin Corporation (LMT) : Free Stock Analysis Report
+Textron Inc. (TXT) : Free Stock Analysis Report
+Airbus Group (EADSY) : Free Stock Analysis Report
+To read this article on Zacks.com click here.
+Zacks Investment Research
+Sign in to access your portfolio
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+Lockheed Martin Corporation’s LMT Aeronautics business segment recently clinched a modification contract to support the F-35 Joint Strike Fighter aircraft program. The award has been provided by the Naval Air Systems Command, Patuxent River, MD.
+Valued at $678.4 million, the contract is expected to be completed by December 2028. Per the terms of the deal, Lockheed will provide various material modification kits, special test and tooling equipment, and associated seed assets to support the F-35 Joint Strike Fighter aircraft.The contract will serve the U.S. Navy, Air Force, Marine Corps and non-Department of Defense participants. The work related to this deal will be executed in Fort Worth, TX.
+The F-35 program is widely recognized as the most advanced 5th-generation fighter jet, offering unmatched mission readiness. With cutting-edge sensors and communication systems, the F-35 is designed to operate seamlessly across multiple domains.These exceptional features must have been driving significant demand for the F-35 jets. This jet program’s demand trend can be gauged from the fact that since its launch, Lockheed has delivered 1,040 units as of Sept. 29, 2024.
+Rising military conflicts, terrorism and border disputes, along with rapid technological advancements in combat jets, have led nations to increase their defense spending on combat-proven jets, which constitute an integral part of their defense structure.This is likely to have prompted the Mordor Intelligence firm to forecast a compound annual growth rate of 5.2% for the global military aviation market during the 2024-2030 period.Such strong market prospects drive growth opportunities for Lockheed Martin, backed by its robust portfolio of combat jets, including the F-16, F-22 and F-21 aircraft, in addition to the F-35 jet. Lockheed Martin’s total backlog was $165.69 billion as of Sept. 29, 2024.
+Other defense companies that are likely to benefit from the expanding global fighter aircraft market are discussed below:Northrop Grumman Corporation NOC: Northrop provides manned and unmanned air systems. It builds some of the world’s most advanced aircraft like the E-2C Hawkeye 2000, A-10 Thunderbolt II, F-5 Tiger Fighter Jet and many more.Northrop has a long-term (three to five years) earnings growth rate of 19%. The Zacks Consensus Estimate for NOC’s 2025 sales indicates year-over-year growth of 3.4%.Embraer ERJ: The company offers a comprehensive portfolio of the most advanced aircraft in the combat market, which includes the A-29 Super Tucano light attack and advanced trainer and the C-390 Millennium military multi-mission aircraft.The Zacks Consensus Estimate for ERJ’s 2025 sales indicates year-over-year growth of 18.3%. The company delivered an average earnings surprise of 127.28% in the last four quarters.The Boeing Company BA: Its Defense, Space & Security segment engages in the research, development, production and modification of manned and unmanned military aircraft. BA’s product portfolio includes a range of combat-proven aircraft like the F/A-18 Super Hornet, P-8, C-17 Globemaster III, EA-18G and a few more.Boeing has a long-term earnings growth rate of 19.3%. The Zacks Consensus Estimate for BA’s 2025 sales indicates year-over-year growth of 21.9%.
+Shares of LMT have risen 2.9% in the past six months against the industry’s 1% decline.
+Image Source: Zacks Investment Research
+LMT currently carries a Zacks Rank #3 (Hold). You can see the complete list of today’s Zacks #1 Rank (Strong Buy) stocks here.
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+The Boeing Company (BA) : Free Stock Analysis Report
+Lockheed Martin Corporation (LMT) : Free Stock Analysis Report
+Northrop Grumman Corporation (NOC) : Free Stock Analysis Report
+Embraer-Empresa Brasileira de Aeronautica (ERJ) : Free Stock Analysis Report
+To read this article on Zacks.com click here.
+Zacks Investment Research
+Sign in to access your portfolio
+The nation’s second largest airline is playing catch-up to rivals after its bet to overhaul corporate travel failed.
+Sign in to access your portfolio
+Error fetching the URL: 403 Client Error: Forbidden for url: https://seekingalpha.com/article/4748423-lockheed-martin-recession-proof-your-portfolio-and-dividends-with-lmt
+We are experiencing some temporary issues. The market data on this page is currently delayed. Please bear with us as we address this and restore your personalized lists.
+(Reuters) - Lockheed Martin delivered a total of 110 F-35 fighter jets to the United States and its allies in 2024, the Bethesda, Maryland-based defense contractor said in a statement on Wednesday.
+The delivery total achieves the higher end of the range of 75 to 110 jet deliveries CEO Jim Taiclet gave in an earnings call last summer.
+Lockheed lifted its sales target in July after the Pentagon resumed taking F-35 deliveries following a months-long pause on delays on its software upgrade. Lockheed has been upgrading the jets under the Technology Refresh 3, or TR-3 program, which gives the F-35 better displays and processing power.
+Lockheed's F-35 program contributes around 30% of the company's revenue.
+"Lockheed Martin is fully committed to advancing and delivering unmatched air dominance solutions to the United States and our allies, helping to ensure America continues to own the skies," the company said in a statement.
+(Reporting by Ryan Patrick Jones and Mike Stone; editing by Diane Craft)
+Sign in to access your portfolio
