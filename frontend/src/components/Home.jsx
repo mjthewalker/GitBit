@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StockAutocomplete from "./StockAutoComplete";
 import axios from "axios";
+import './Home.css'
 
 import {
   Leaf,
@@ -69,6 +70,7 @@ const Home = ({ expanded }) => {
   const [input, setInput] = useState("");
   const [isRequestSent, setIsRequestSent] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
+  const [isLoading, setIsLoading] = useState(false);   
   const [transactionForm, setTransactionForm] = useState({
     transactionType: "Buy",
     assetName: "",
@@ -143,31 +145,21 @@ const Home = ({ expanded }) => {
   };
 
   useEffect(() => {
-    if (isChatboxExpanded && !isRequestSent) { // Check if the request has not been sent yet
-      axios.post(`http://localhost:8000/chat/query/${user._id}`)
+    if (isChatboxExpanded && !isRequestSent) {
+      setIsLoading(true);  // Set loading to true when the request is about to be sent
+
+      axios.get(`http://localhost:8000/chat/${user._id}`)
         .then((response) => {
           console.log("Initial request sent", response.data);
-          setIsRequestSent(true); // Mark the request as sent
+          setIsRequestSent(true);
+          setIsLoading(false);  // Set loading to false when the response is received
         })
         .catch((error) => {
           console.error("Error sending initial request:", error);
+          setIsLoading(false);  // Set loading to false in case of an error
         });
     }
   }, [isChatboxExpanded, isRequestSent]);
-
-  
-
-  useEffect(() => {
-    if (isChatboxExpanded) {
-      axios.post(`http://localhost:8000/chat/query/${user._id}`)
-        .then((response) => {
-          console.log("Initial request sent", response.data);
-        })
-        .catch((error) => {
-          console.error("Error sending initial request:", error);
-        });
-    }
-  }, [isChatboxExpanded]);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -223,19 +215,32 @@ const Home = ({ expanded }) => {
 
   const handleMessageSend = () => {
     if (input.trim()) {
-      axios.post(`http://localhost:8000/chat/query/${user._id}`, { query: input })
+      axios
+        .post(`http://localhost:8000/chat/query/${user._id}`, { query: input })
         .then((response) => {
           console.log("Query response:", response.data);
+  
+          // Extract content after "Chat Answer:"
+          const result = response.data.result;
+          const chatAnswerIndex = result.indexOf("Chat Answer:");
+          
+          if (chatAnswerIndex !== -1) {
+            const answer = result.substring(chatAnswerIndex + "Chat Answer:".length).trim();
+            
+            // Add the extracted answer to the messages
+            const newMessage = { type: "received", text: answer };
+            setMessages((prevMessages) => [...prevMessages, newMessage]);
+          }
         })
         .catch((error) => {
           console.error("Error sending query:", error);
         });
-
+  
       const newMessage = { type: "sent", text: input };
       setMessages((prevMessages) => [...prevMessages, newMessage]);
       setInput("");
     }
-  };
+  };  
 
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("en-US", {
@@ -641,13 +646,18 @@ const Home = ({ expanded }) => {
                     : "bg-gray-100 text-green-800 mr-auto flex-start"
                 }`}
                 style={{
-                  display: "inline-block", // Ensures the box adjusts to the content
-                  maxWidth: "55%", // Restricts the width to 50% of the parent
+                  display: "inline-block",
+                  maxWidth: "55%",
                 }}
               >
                 {msg.text}
               </div>
             ))}
+            {isLoading && (
+              <div className="flex justify-center items-center">
+                <div className="loader"></div> {/* Display the loading spinner */}
+              </div>
+            )}
           </div>
         </div>
       </div>
