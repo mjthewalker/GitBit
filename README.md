@@ -23,3 +23,19 @@ To start the server run
 ```
 npm run dev
 ```
+
+
+TechNologies/Tools/Frameworks Used 
+```
+
+React, tailwind css, RAG, Web3, wolframalpha, plotch, Seponia, Web2, Remix, metamask 
+```
+
+
+
+
+
+
+
+
+
