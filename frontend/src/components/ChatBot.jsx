@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Send, TreePine, Leaf, Wind } from "lucide-react";
+import { useEffect } from "react";
 
 export default function ChatBot({ expanded }) {
   const [messages, setMessages] = useState([]);
