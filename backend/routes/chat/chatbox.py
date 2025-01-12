@@ -170,7 +170,7 @@ def send_query_to_model(search_query, paramss, vectorlake_instance=None):
 
         payload = {
             "messages": [
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": "You are a helpful assistant. You have a doc related to the users investments each sub doc has the user's stock detail in the beginning and news related to his stocks afterwards, so if the user asks details about his stocks give info only about the stock he owns and dont get confused by the stocks in the news "},
                 {
                     "role": "user",
                     "content": f"Using the following context from retrieved documents: {enriched_context}, "
