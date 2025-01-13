@@ -10,7 +10,7 @@ const router = express.Router();
 // GitHub credentials
 const GITHUB_USERNAME = 'mjthewalker';
 const GITHUB_REPO = 'pdf';
-const GITHUB_TOKEN = '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';
+const GITHUB_TOKEN = 'my ass token and all i wont give';
 
 // Define absolute paths for files
 const SCRIPT_DIR = __dirname;
